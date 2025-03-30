@@ -38,17 +38,15 @@ jobs:
       run: |
         python -m pip install --upgrade pip
 
+    - name: Install Python Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
     - name: Install flet-cli ${{ env.FLET_CLI_VERSION }}
       run: |
         pip install flet-cli==$FLET_CLI_VERSION
 
-    - name: Install MarkupSafe (compatible version)
-      run: |
-        pip install MarkupSafe==2.1.5  # Installing the correct compatible version of MarkupSafe
-
-    - name: tornado==6.4.2
-      run: |
-        pip install tornado==6.4.2  # Installing the correct compatible version of MarkupSafe
 
     - name: Flet Build Web
       run: |
