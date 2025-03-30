@@ -44,7 +44,7 @@ jobs:
 
     - name: Install MarkupSafe (compatible version)
       run: |
-        pip install MarkupSafe==2.1.5  # Installing a compatible version of MarkupSafe
+        pip install MarkupSafe==2.1.5  # Installing the correct compatible version of MarkupSafe
 
     - name: Flet Build Web
       run: |
